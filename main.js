@@ -104,9 +104,9 @@ const eventListeners = () => {
   document.querySelector("#student-container").addEventListener("click", (e) => {
     if (e.target.id.includes("expel")) {
       const [, int] = e.target.id.split("--");
-      const index = students.findIndex((student) => student.id === int);
+      const index = students.findIndex((student) => student.id === Number(int));
       
-      const expelledStudent = students.splice(index, 1);
+      const expelledStudent = students.splice(index, 1)[0];
       deathEaters.push(expelledStudent)
       showDarkSide(deathEaters)
       studentsOnDom(students)
