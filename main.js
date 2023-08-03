@@ -49,7 +49,9 @@ const studentsOnDom = (array) => {
 };
 
 const filterByHouse = (house) => {
-  const filteredStudents = students.filter((student) => student.house === house);
+  const filteredStudents = students.filter(
+    (student) => student.house === house
+  );
   studentsOnDom(filteredStudents);
 };
 
@@ -60,7 +62,7 @@ const openForm = () => {
     <label for="name" class="form-label">Your name</label>
     <input type="text" class="form-control" id="name">
   </div>
-  <button type="submit" id="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" id="submit" class="btn btn-primary">Sort me!</button>
   </form>
   `;
   renderToDom("#form", domString);
@@ -68,12 +70,12 @@ const openForm = () => {
 
 const showDarkSide = (array) => {
   let domString = "";
-  for (const expelledStudent of deathEaters) {
+  for (const student of deathEaters) {
     domString += `
     <div class="card" style="width: 18rem;">
     <div class="card-body">
-      <h5 id="name" class="card-title">${expelledStudent.name}</h5>
-      <button id="redeem--${expelledStudent.id}" class="btn btn-primary">Redeem</button>
+      <h5 id="name" class="card-title">${student.name}</h5>
+      <button id="redeem--${student.id}" class="btn btn-primary">Redeem</button>
     </div>
     </div>
     `;
@@ -149,6 +151,22 @@ const eventListeners = () => {
 
         const expelledStudent = students.splice(index, 1)[0];
         deathEaters.push(expelledStudent);
+        showDarkSide(deathEaters);
+        studentsOnDom(students);
+      }
+    });
+
+  document
+    .querySelector("#expelled-container")
+    .addEventListener("click", (e) => {
+      if (e.target.id.includes("redeem")) {
+        const [, int] = e.target.id.split("--");
+        const index = deathEaters.findIndex(
+          (student) => student.id === Number(int)
+        );
+
+        const redeemedStudent = deathEaters.splice(index, 1)[0];
+        students.push(redeemedStudent);
         showDarkSide(deathEaters);
         studentsOnDom(students);
       }
