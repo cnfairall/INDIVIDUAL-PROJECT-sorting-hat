@@ -2,7 +2,7 @@ const students = [
 {
   id: 1,
   name: "Aja",
-  house: "Griffyndor",
+  house: "Gryffindor",
 },
 
 {
@@ -21,6 +21,7 @@ const students = [
 
 
 const openFormBtn = document.querySelector("#open-form-btn");
+const filterBtn = document.querySelector("#filter-buttons")
 const form = document.querySelector("form");
 const deathEaters = []
 
@@ -46,6 +47,11 @@ const studentsOnDom = (array) => {
     `
   };
   renderToDom("#student-container", domString);
+};
+
+const filterByHouse = (house) => {
+  const filteredStudents = students.filter((student) => (student.house === house));
+  studentsOnDom(filteredStudents);
 };
 
 const openForm = () => {
@@ -79,7 +85,7 @@ const showDarkSide = (array) => {
 }
 
 const newStudent = () => {
-  const houses = ["Hufflepuff", "Griffyndor", "Ravenclaw", "Slytherin"]
+  const houses = ["Hufflepuff", "Gryffindor", "Ravenclaw", "Slytherin"]
   const randomNumber = Math.floor(Math.random() * 4);
   const chosenHouse = houses[randomNumber];
   const newStudentObj = {
@@ -99,6 +105,26 @@ const eventListeners = () => {
     e.preventDefault();
     newStudent();
     renderToDom("#form", "")
+  })
+
+  filterBtn.addEventListener("click", (e) => {
+    switch (e.target.id) {
+      case "Gryffindor":
+        filterByHouse("Gryffindor");
+        break;
+      case "Ravenclaw":
+        filterByHouse("Ravenclaw");
+        break;
+      case "Slytherin":
+        filterByHouse("Slytherin");
+        break;
+      case "Hufflepuff":
+        filterByHouse("Hufflepuff");
+        break;
+      default:
+        studentsOnDom(students)
+        break;
+    }
   })
 
   document.querySelector("#student-container").addEventListener("click", (e) => {
