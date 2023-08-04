@@ -1,7 +1,6 @@
 body {
   display: flex;
   flex-direction: column;
-  align-items: center;
   background: url(https://wallpaperaccess.com/full/871025.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -9,6 +8,7 @@ body {
 }
 
 #header {
+  display: flex;
   justify-content: center;
   align-items: auto;
   height: max-content;
@@ -56,8 +56,8 @@ body {
 }
 
 #filter-buttons {
-  justify-content: center;
-  margin: 20px;
+  display: flex;
+  justify-content: center;  margin: 20px;
 
 }
 #sorting-hat {
@@ -109,6 +109,7 @@ body {
 #student-cards {
   display: flex;
   flex-direction: row;
+  justify-content: space-evenly;
 }
 
 #dark-side {
@@ -121,6 +122,8 @@ body {
   box-shadow: 0px 0px 20px 20px black;
   color: silver;
   font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+  letter-spacing: 1px;
 
 }
 
@@ -152,4 +155,25 @@ span {
 .death {
   background-color: rgb(87, 154, 87);
   font-style: italic;
+}
+
+#death-title {
+  font-family: Eater;
+  font-size: 40px;
+}
+
+.Gryffindor {
+  background-color: red;
+}
+
+.Ravenclaw {
+  background-color: blue;
+}
+
+.Slytherin {
+  background-color: green;
+}
+
+.Hufflepuff {
+  background-color: yellow;
 }
