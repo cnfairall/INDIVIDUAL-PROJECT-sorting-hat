@@ -37,8 +37,10 @@ const studentsOnDom = (array) => {
   for (const student of array) {
     domString += `
       <div id="card" class="card" style="width: 18rem;">
+      <p id="color" class="${student.house}"></p>
+
       <div class="card-body">
-        <h5 id="name" class="card-title">${student.name}</h5>
+        <h1 id="name" class="card-title">${student.name}</h1>
         <p class="card-text">${student.house}</p>
         <button id="expel--${student.id}" class="btn btn-secondary">Expel</button>
       </div>
