@@ -40,7 +40,7 @@ const studentsOnDom = (array) => {
       <div class="card-body">
         <h5 id="name" class="card-title">${student.name}</h5>
         <p class="card-text">${student.house}</p>
-        <button id="expel--${student.id}" class="btn btn-primary">Expel</button>
+        <button id="expel--${student.id}" class="btn btn-secondary">Expel</button>
       </div>
       </div>
     `;
@@ -72,7 +72,7 @@ const showDarkSide = (array) => {
   let domString = "";
   for (const student of deathEaters) {
     domString += `
-    <div class="card" style="width: 18rem;">
+    <div class="card death" style="width: 18rem;">
     <div class="card-body">
       <h5 id="name" class="card-title">${student.name}</h5>
       <button id="redeem--${student.id}" class="btn btn-primary">Redeem</button>
