@@ -1,22 +1,4 @@
-const students = [
-  {
-    id: 1,
-    name: "Aja",
-    house: "Gryffindor",
-  },
-
-  {
-    id: 2,
-    name: "Dr. T",
-    house: "Ravenclaw",
-  },
-
-  {
-    id: 3,
-    name: "Mollie",
-    house: "Hufflepuff",
-  },
-];
+const students = [];
 
 const openFormBtn = document.querySelector("#open-form-btn");
 const filterBtn = document.querySelector("#filter-buttons");

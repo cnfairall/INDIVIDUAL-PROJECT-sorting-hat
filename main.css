@@ -13,7 +13,8 @@ body {
   align-items: auto;
   height: max-content;
   font-family: Bigelow Rules;
-  font-size: 200px;
+  font-size: 150px;
+  filter: drop-shadow(0 0 .5rem black)
 }
 
 #hat-container {
@@ -29,7 +30,7 @@ body {
     1px 1px 2px black,
     0 0 1em blue,
     0 0 0.2em blue;
-  color: white;
+  color: rgb(231, 226, 171);
   font-family: 'Times New Roman', Times, serif;
   font-size: 25px;
   font-style: italic;
@@ -65,17 +66,18 @@ body {
 #filter-buttons {
   display: flex;
   justify-content: center;
-  margin: 60px;
+  margin: 30px;
 
 }
-#sorting-hat {
-  width: 300px;
+#open-form-btn {
+  width: 200px;
+  filter: drop-shadow(0 0 1rem rgba(0, 0, 255, 0.53));
 }
 
 #death-eaters {
   width: 250px;
   border-radius: 10px;
-  filter: drop-shadow(0 0 2rem rgb(66, 243, 107));
+  filter: drop-shadow(0 0 1rem rgb(66, 243, 107));
   border: 1px solid silver;
 }
 
@@ -124,11 +126,12 @@ body {
 }
 
 #dark-side {
+  padding: 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  margin: 40px;
+  margin: 20px;
   background-color: black;
   box-shadow: 0px 0px 20px 20px black;
   color: silver;
@@ -141,10 +144,25 @@ body {
 
 }
 
+#first-years {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  background-color: rgb(231, 226, 171);
+  flex-basis: 30%;
+  border-radius: 10px;
+  align-items: center;
+}
+
+#student-title {
+  font-family: Bigelow Rules;
+  font-size: 50px;
+}
+
 #student-container {
   display: flex;
   flex-direction: column-reverse;
-  margin: 10px;
 }
 
 .card {
