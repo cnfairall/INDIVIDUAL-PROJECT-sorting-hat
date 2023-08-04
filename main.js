@@ -36,7 +36,7 @@ const studentsOnDom = (array) => {
   let domString = "";
   for (const student of array) {
     domString += `
-      <div class="card" style="width: 18rem;">
+      <div id="card" class="card" style="width: 18rem;">
       <div class="card-body">
         <h5 id="name" class="card-title">${student.name}</h5>
         <p class="card-text">${student.house}</p>
