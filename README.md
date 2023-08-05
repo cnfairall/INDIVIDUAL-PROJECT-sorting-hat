@@ -14,7 +14,7 @@ Sorting Hat lets you join your class at Hogwarts! Get sorted, view students by h
 - Use redeem to push expelled students back to Hogwarts!
 
 ## Video Walkthrough
-https://www.loom.com/share/829b90d831ea441ba2db6bea724af210
+https://www.loom.com/share/29122ba7019142659e279b025831fc3f?sid=11166d25-0b14-458f-bc62-5f4c93b99190
 
 - [Check out the deployed site](https://voluble-torrone-2c2899.netlify.app/)
 - [Project Board](https://github.com/users/cnfairall/projects/1/views/1)

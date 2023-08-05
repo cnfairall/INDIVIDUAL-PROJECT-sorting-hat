@@ -54,7 +54,7 @@ const openForm = () => {
 
 const showDarkSide = (array) => {
   let domString = "";
-  for (const student of deathEaters) {
+  for (const student of array) {
     domString += `
     <div class="card death" style="width: 18rem;">
     <div class="card-body">
@@ -69,7 +69,7 @@ const showDarkSide = (array) => {
 
 const newStudent = () => {
   const houses = ["Hufflepuff", "Gryffindor", "Ravenclaw", "Slytherin"];
-  const randomNumber = Math.floor(Math.random() * 4);
+  const randomNumber = Math.floor(Math.random() * houses.length);
   const chosenHouse = houses[randomNumber];
   const newStudentObj = {
     id: students.length + 1,
@@ -151,8 +151,8 @@ const eventListeners = () => {
 
         const redeemedStudent = deathEaters.splice(index, 1)[0];
         students.push(redeemedStudent);
-        showDarkSide(deathEaters);
         studentsOnDom(students);
+        showDarkSide(deathEaters);
       }
     });
 };
