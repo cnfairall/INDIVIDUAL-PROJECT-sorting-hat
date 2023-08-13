@@ -63,8 +63,8 @@ const showDarkSide = (array) => {
     </div>
     </div>
     `;
-    renderToDom("#expelled-container", domString);
   }
+  renderToDom("#expelled-container", domString);
 };
 
 const newStudent = () => {
